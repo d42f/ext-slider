@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider Demo</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body class="unready">
+    <div class="container-fluid" ng-app="myApp" ng-controller="MyAppCtrl">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div ng-if="!items">
+            <div class="progress progress-striped active">
+              <div class="progress-bar" my-class="'progress-bar-full-width'"></div>
+            </div>
+          </div>
+          <div ng-if="items">
+            <my-slider items="items"></my-slider>
+            <hr>
+            <pre ng-bind="items | json"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
